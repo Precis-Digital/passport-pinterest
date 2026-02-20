@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "env": {
+    "node": true
+  },
+  "globals": {
+    "describe": "readonly",
+    "it": "readonly",
+    "before": "readonly",
+    "beforeEach": "readonly",
+    "after": "readonly",
+    "afterEach": "readonly",
+    "expect": "readonly"
+  },
+  "rules": {
+    "no-new": "off"
+  }
+}

@@ -8,17 +8,13 @@ export interface Profile {
     _json: Record<string, unknown>;
 }
 
-export type VerifyCallback = (
-    err: Error | null,
-    user?: object | false,
-    info?: object
-) => void;
+export type VerifyCallback = (err: Error | null, user?: object | false, info?: object) => void;
 
 export type VerifyFunction = (
     accessToken: string,
     refreshToken: string,
     profile: Profile,
-    done: VerifyCallback
+    done: VerifyCallback,
 ) => void;
 
 export interface PinterestStrategyOptions {
@@ -37,10 +33,7 @@ export interface PinterestStrategyOptions {
 export class Strategy extends OAuth2Strategy {
     constructor(options: PinterestStrategyOptions, verify: VerifyFunction);
     name: 'pinterest';
-    userProfile(
-        accessToken: string,
-        done: (err: Error | null, profile?: Profile) => void
-    ): void;
+    userProfile(accessToken: string, done: (err: Error | null, profile?: Profile) => void): void;
 }
 
 export const version: string;

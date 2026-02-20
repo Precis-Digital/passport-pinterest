@@ -5,7 +5,8 @@ coverage/
 test/
 .editorconfig
 .gitignore
-.jshintrc
 .mocharc.yml
+.oxlintrc.json
+.oxfmtrc.json
 npm-debug.log
 tsconfig.json

@@ -33,7 +33,7 @@ const verify: VerifyFunction = (
     accessToken: string,
     refreshToken: string,
     profile: Profile,
-    done: VerifyCallback
+    done: VerifyCallback,
 ) => {
     const id: string = profile.id;
     const provider: 'pinterest' = profile.provider;
@@ -44,7 +44,7 @@ const verify: VerifyFunction = (
 
 // Strategy construction
 const strategy = new Strategy(minimalOptions, verify);
-const strategyName: 'pinterest' = strategy.name;
+const _strategyName: 'pinterest' = strategy.name;
 
 // Strategy with inline verify
 const _strategy2 = new Strategy(fullOptions, (_accessToken, _refreshToken, profile, done) => {

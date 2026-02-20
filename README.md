@@ -17,15 +17,15 @@ npm install passport-pinterest
 ### TypeScript
 
 ```typescript
-import { Strategy as PinterestStrategy, Profile } from "passport-pinterest";
+import { Strategy as PinterestStrategy, Profile } from 'passport-pinterest';
 
 passport.use(
     new PinterestStrategy(
         {
             clientID: process.env.PINTEREST_CLIENT_ID!,
             clientSecret: process.env.PINTEREST_CLIENT_SECRET!,
-            callbackURL: "https://example.com/auth/pinterest/callback",
-            scope: ["user_accounts:read"],
+            callbackURL: 'https://example.com/auth/pinterest/callback',
+            scope: ['user_accounts:read'],
         },
         (accessToken: string, refreshToken: string, profile: Profile, done) => {
             User.findOrCreate({ pinterestId: profile.id }, (err, user) => {
@@ -39,23 +39,20 @@ passport.use(
 ### JavaScript
 
 ```js
-const { Strategy: PinterestStrategy } = require("passport-pinterest");
+const { Strategy: PinterestStrategy } = require('passport-pinterest');
 
 passport.use(
     new PinterestStrategy(
         {
             clientID: process.env.PINTEREST_CLIENT_ID,
             clientSecret: process.env.PINTEREST_CLIENT_SECRET,
-            callbackURL: "https://example.com/auth/pinterest/callback",
-            scope: ["user_accounts:read"],
+            callbackURL: 'https://example.com/auth/pinterest/callback',
+            scope: ['user_accounts:read'],
         },
         function (accessToken, refreshToken, profile, done) {
-            User.findOrCreate(
-                { pinterestId: profile.id },
-                function (err, user) {
-                    done(err, user);
-                },
-            );
+            User.findOrCreate({ pinterestId: profile.id }, function (err, user) {
+                done(err, user);
+            });
         },
     ),
 );
@@ -64,13 +61,13 @@ passport.use(
 ### Routes
 
 ```js
-app.get("/auth/pinterest", passport.authenticate("pinterest"));
+app.get('/auth/pinterest', passport.authenticate('pinterest'));
 
 app.get(
-    "/auth/pinterest/callback",
-    passport.authenticate("pinterest", { failureRedirect: "/login" }),
+    '/auth/pinterest/callback',
+    passport.authenticate('pinterest', { failureRedirect: '/login' }),
     function (req, res) {
-        res.redirect("/");
+        res.redirect('/');
     },
 );
 ```
