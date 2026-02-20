@@ -19,32 +19,32 @@
   "license": "ISC",
   "author": "Nicolai Kamenzky (https://github.com/analog-nico)",
   "main": "./lib/passport-pinterest/index.js",
+  "types": "./lib/passport-pinterest/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/analog-nico/passport-pinterest.git"
   },
   "scripts": {
-    "test": "node_modules/.bin/gulp ci"
+    "test": "mocha",
+    "test:coverage": "c8 mocha",
+    "lint": "jshint lib/ test/spec/",
+    "typecheck": "tsc --noEmit",
+    "ci": "npm run lint && npm run typecheck && npm test"
   },
   "dependencies": {
-    "lodash": "^4.13.1",
-    "passport-oauth": "1.0.x",
-    "pkginfo": "^0.4"
+    "passport-oauth": "1.0.x"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=18.0.0"
   },
   "devDependencies": {
-    "chai": "3.5.x",
-    "chalk": "1.1.x",
-    "gulp": "3.9.x",
-    "gulp-coveralls": "0.1.x",
-    "gulp-istanbul": "0.10.x",
-    "gulp-jshint": "2.0.x",
-    "gulp-mocha": "2.2.x",
+    "@types/node": "^20.0.0",
+    "@types/passport-oauth2": "^1.4.0",
+    "c8": "^10.0.0",
+    "chai": "^4.3.0",
     "jshint": "2.9.x",
     "jshint-stylish": "2.2.x",
-    "rimraf": "2.5.x",
-    "run-sequence": "1.2.x"
+    "mocha": "^10.0.0",
+    "typescript": "^5.0.0"
   }
 }

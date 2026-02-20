@@ -1,10 +1,11 @@
 .DS_Store
 .idea/
+.github/
 coverage/
 test/
 .editorconfig
 .gitignore
 .jshintrc
-.travis.yml
-gulpfile.js
+.mocharc.yml
 npm-debug.log
+tsconfig.json

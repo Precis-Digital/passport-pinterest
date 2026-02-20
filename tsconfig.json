@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "module": "commonjs",
+        "target": "ES2017",
+        "noEmit": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "skipLibCheck": true
+    },
+    "include": [
+        "lib/**/*.d.ts",
+        "test/types/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
