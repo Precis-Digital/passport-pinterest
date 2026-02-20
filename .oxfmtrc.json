@@ -5,5 +5,5 @@
   "singleQuote": true,
   "semi": true,
   "trailingComma": "all",
-  "ignorePatterns": ["*.json", "*.jsonc", "*.yml", "*.yaml"]
+  "ignorePatterns": ["*.json", "*.jsonc", "*.yml", "*.yaml", "*.md"]
 }
