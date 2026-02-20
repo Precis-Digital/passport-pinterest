@@ -38,10 +38,10 @@
     "passport-oauth": "1.0.x"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=23.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
+    "@types/node": "^24.0.0",
     "@types/passport-oauth2": "^1.4.0",
     "c8": "^10.0.0",
     "chai": "^4.3.0",
